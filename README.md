@@ -6,7 +6,7 @@ This is part of the Swift Tech Co. working stack for product and engineering. It
 
 ## Images
 
-[![ha_xiaomi_home](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![ha_xiaomi_home](images/preview.png)](https://github.com/Swift-Tech-Co/ha_xiaomi_home)
 
 ## Installation
 
@@ -19,7 +19,7 @@ This is part of the Swift Tech Co. working stack for product and engineering. It
 
 ```bash
 cd config
-git clone https://www.swifttechco.com
+git clone https://github.com/Swift-Tech-Co/ha_xiaomi_home
 cd ha_xiaomi_home
 ./install.sh /config
 ```
@@ -39,7 +39,7 @@ git checkout v1.0.0
 
 One-click installation from HACS:
 
-[![Open your Home Assistant instance and open the Xiaomi Home integration inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://www.swifttechco.com)
+[![Open your Home Assistant instance and open the Xiaomi Home integration inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://github.com/Swift-Tech-Co/ha_xiaomi_home)
 
 Or, HACS > In the search box, type **Xiaomi Home** > Click **Xiaomi Home**, getting into the detail page > DOWNLOAD
 
@@ -53,7 +53,7 @@ Download and copy `custom_components/xiaomi_home` folder to `config/custom_compo
 
 Settings > Devices & services > ADD INTEGRATION > Search `Xiaomi Home` > NEXT > Click here to login > Sign in with Xiaomi account
 
-[![Open your Home Assistant instance and start setting up a new Xiaomi Home integration instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://www.swifttechco.com)
+[![Open your Home Assistant instance and start setting up a new Xiaomi Home integration instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://github.com/Swift-Tech-Co/ha_xiaomi_home)
 
 ### Add MIoT Devices
 
@@ -65,7 +65,7 @@ After a Xiaomi account login and its user configuration are completed, you can c
 
 Method: Settings > Devices & services > Configured > Xiaomi Home > ADD HUB > NEXT > Click here to login > Sign in with Xiaomi account
 
-[![Open your Home Assistant instance and show Xiaomi Home integration.](https://my.home-assistant.io/badges/integration.svg)](https://www.swifttechco.com)
+[![Open your Home Assistant instance and show Xiaomi Home integration.](https://my.home-assistant.io/badges/integration.svg)](https://github.com/Swift-Tech-Co/ha_xiaomi_home)
 
 ### Update Configurations
 
@@ -387,7 +387,7 @@ Example:
 - [License](./LICENSE.md)
 - Contribution Guidelines: [English](./CONTRIBUTING.md) | [简体中文](./doc/CONTRIBUTING_zh.md)
 - [ChangeLog](./CHANGELOG.md)
-- Development Documents: https://www.swifttechco.com
+- Development Documents: https://github.com/Swift-Tech-Co/ha_xiaomi_home
 - FAQ
 
 ## Directory Structure
@@ -419,13 +419,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/ha_xiaomi_home
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [XiaoMi/ha_xiaomi_home](https://github.com/XiaoMi/ha_xiaomi_home) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
