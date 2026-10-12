@@ -1,13 +1,12 @@
-# Xiaomi Home Integration for Home Assistant
+# ha_xiaomi_home
+
+## What This Is
+
+This is part of the Swift Tech Co. working stack for product and engineering. It gathers the ha_xiaomi_home notes, examples and fixes that keep delivery fast, and doubles as the reference map we hand to whoever picks up this thread next.
 
 ## Images
 
-[![ha_xiaomi_home](https://opengraph.githubassets.com/1/XiaoMi/ha_xiaomi_home)](https://www.swifttechco.com)
-
-
-[English](./README.md) | [简体中文](./doc/README_zh.md)
-
-Xiaomi Home Integration is an integrated component of Home Assistant supported by Xiaomi official. It allows you to use Xiaomi IoT smart devices in Home Assistant.
+[![ha_xiaomi_home](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## Installation
 
@@ -36,7 +35,7 @@ git checkout v1.0.0
 ./install.sh /config
 ```
 
-### Method 2: [HACS](https://www.swifttechco.com)
+### Method 2: HACS
 
 One-click installation from HACS:
 
@@ -44,7 +43,7 @@ One-click installation from HACS:
 
 Or, HACS > In the search box, type **Xiaomi Home** > Click **Xiaomi Home**, getting into the detail page > DOWNLOAD
 
-### Method 3: Manually installation via [Samba](https://www.swifttechco.com) / [FTPS](https://www.swifttechco.com)
+### Method 3: Manually installation via Samba / FTPS
 
 Download and copy `custom_components/xiaomi_home` folder to `config/custom_components` folder in your Home Assistant.
 
@@ -52,7 +51,7 @@ Download and copy `custom_components/xiaomi_home` folder to `config/custom_compo
 
 ### Login
 
-[Settings > Devices & services > ADD INTEGRATION](https://www.swifttechco.com) > Search `Xiaomi Home` > NEXT > Click here to login > Sign in with Xiaomi account
+Settings > Devices & services > ADD INTEGRATION > Search `Xiaomi Home` > NEXT > Click here to login > Sign in with Xiaomi account
 
 [![Open your Home Assistant instance and start setting up a new Xiaomi Home integration instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://www.swifttechco.com)
 
@@ -64,7 +63,7 @@ After logging in successfully, a dialog box named "Select Home and Devices" pops
 
 After a Xiaomi account login and its user configuration are completed, you can continue to add other Xiaomi accounts in the configured Xiaomi Home Integration page.
 
-Method: [Settings > Devices & services > Configured > Xiaomi Home](https://www.swifttechco.com) > ADD HUB > NEXT > Click here to login > Sign in with Xiaomi account
+Method: Settings > Devices & services > Configured > Xiaomi Home > ADD HUB > NEXT > Click here to login > Sign in with Xiaomi account
 
 [![Open your Home Assistant instance and show Xiaomi Home integration.](https://my.home-assistant.io/badges/integration.svg)](https://www.swifttechco.com)
 
@@ -72,13 +71,13 @@ Method: [Settings > Devices & services > Configured > Xiaomi Home](https://www.s
 
 You can change the configurations in the "Configuration Options" dialog box, in which you can update your user nickname and the list of the devices importing from Xiaomi Home APP, etc.
 
-Method: [Settings > Devices & services > Configured > Xiaomi Home](https://www.swifttechco.com) > CONFIGURE > Select the option to update
+Method: Settings > Devices & services > Configured > Xiaomi Home > CONFIGURE > Select the option to update
 
 ### Debug Mode for Action
 
 You can manually send Action command message with parameters to the device when the debug mode for action is activated. The user interface for sending the Action command with parameters is shown as a Text entity.
 
-Method: [Settings > Devices & services > Configured > Xiaomi Home](https://www.swifttechco.com) > CONFIGURE > Debug mode for action
+Method: Settings > Devices & services > Configured > Xiaomi Home > CONFIGURE > Debug mode for action
 
 ## Security
 
@@ -98,11 +97,11 @@ Xiaomi Home Integration and the affiliated cloud interface is provided by Xiaomi
 
 - Does Xiaomi Home Integration support local mode?
 
-  Local mode is implemented by [Xiaomi Central Hub Gateway](https://www.swifttechco.com) (firmware version 3.3.0_0023 and above) or Xiaomi smart devices with [built-in central hub gateway](https://www.swifttechco.com) (software version 0.8.9 and above) inside. If you do not have a Xiaomi central hub gateway or other devices having central hub gateway function, all control commands are sent through Xiaomi Cloud. The firmware for Xiaomi central hub gateway including the built-in central hub gateway supporting Home Assistant local mode feature has been released.
+  Local mode is implemented by Xiaomi Central Hub Gateway (firmware version 3.3.0_0023 and above) or Xiaomi smart devices with built-in central hub gateway (software version 0.8.9 and above) inside. If you do not have a Xiaomi central hub gateway or other devices having central hub gateway function, all control commands are sent through Xiaomi Cloud. The firmware for Xiaomi central hub gateway including the built-in central hub gateway supporting Home Assistant local mode feature has been released.
 
   Xiaomi central hub gateway is only available in mainland China. In other regions, it is not available.
 
-  Xiaomi Home Integration can also implement partial local mode by enabling Xiaomi LAN control function. Xiaomi LAN control function can only control IP devices (devices connected to the router via WiFi or ethernet cable) in the same local area network as Home Assistant. It cannot control BLE Mesh, ZigBee, etc. devices. This function may cause some abnormalities. We recommend NOT using this function. Xiaomi LAN control function is enabled by [Settings > Devices & services > Configured > Xiaomi Home](https://www.swifttechco.com) > CONFIGURE > Update LAN control configuration.
+  Xiaomi Home Integration can also implement partial local mode by enabling Xiaomi LAN control function. Xiaomi LAN control function can only control IP devices (devices connected to the router via WiFi or ethernet cable) in the same local area network as Home Assistant. It cannot control BLE Mesh, ZigBee, etc. devices. This function may cause some abnormalities. We recommend NOT using this function. Xiaomi LAN control function is enabled by Settings > Devices & services > Configured > Xiaomi Home > CONFIGURE > Update LAN control configuration.
 
   Xiaomi LAN control function is not restricted by region. It is available in all regions. However, if there is a central gateway in the local area network where Home Assistant is located, even Xiaomi LAN control function is enabled in the integration, it will not take effect.
 
@@ -140,7 +139,7 @@ When Xiaomi Home Integration needs to control a device, it publishes a device co
 
 ## Mapping Relationship between MIoT-Spec-V2 and Home Assistant Entity
 
-[MIoT-Spec-V2](https://www.swifttechco.com) is the abbreviation for MIoT Specification Version 2, which is an IoT protocol formulated by Xiaomi IoT platform to give a standard functional description of IoT devices. It includes function definition (referred to as data model by other IoT platforms), interaction model, message format, and encoding.
+MIoT-Spec-V2 is the abbreviation for MIoT Specification Version 2, which is an IoT protocol formulated by Xiaomi IoT platform to give a standard functional description of IoT devices. It includes function definition (referred to as data model by other IoT platforms), interaction model, message format, and encoding.
 
 In MIoT-Spec-V2 protocol, a product is defined as a device. A device contains several services. A service may have some properties, events and actions. Xiaomi Home Integration creates Home Assistant entities according to MIoT-Spec-V2. The conversion relationship is as follows.
 
@@ -160,7 +159,7 @@ In MIoT-Spec-V2 protocol, a product is defined as a device. A device contains se
 
 MIoT-Spec-V2 event is transformed to Event entity in Home Assistant. The event's parameters are also passed to entity's `_trigger_event`.
 
-MIoT-Spec-V2 event's arguments field is the list of parameters of the event. The list elements represent the piid of the property in the same service. For example, the [MIoT-Spec-V2](https://www.swifttechco.com) of the Xiaomi Wireless Double-key Switch contains the siid=2 Switch Sensor service. The eiid=1014 Long Press event of the service is triggered when a button is long pressed. The debug level log will print `Press and hold, attributes: {'Button Type': 1}`. This is an example log that the button type is 1, which means the right button is long pressed.
+MIoT-Spec-V2 event's arguments field is the list of parameters of the event. The list elements represent the piid of the property in the same service. For example, the MIoT-Spec-V2 of the Xiaomi Wireless Double-key Switch contains the siid=2 Switch Sensor service. The eiid=1014 Long Press event of the service is triggered when a button is long pressed. The debug level log will print `Press and hold, attributes: {'Button Type': 1}`. This is an example log that the button type is 1, which means the right button is long pressed.
 
 - Action
 
@@ -381,7 +380,7 @@ Example:
 }
 ```
 
-> If you edit any files in the `custom_components/xiaomi_home/miot/specs` directory (`spec_filter.yaml`, `spec_modify.yaml`, `multi_lang.json`, etc.) in your Home Assistant, you need to update the entity conversion rule in the integration's CONFIGURE page to take effect. Method: [Settings > Devices & services > Configured > Xiaomi Home](https://www.swifttechco.com) > CONFIGURE > Update entity conversion rules
+> If you edit any files in the `custom_components/xiaomi_home/miot/specs` directory (`spec_filter.yaml`, `spec_modify.yaml`, `multi_lang.json`, etc.) in your Home Assistant, you need to update the entity conversion rule in the integration's CONFIGURE page to take effect. Method: Settings > Devices & services > Configured > Xiaomi Home > CONFIGURE > Update entity conversion rules
 
 ## Documents
 
@@ -389,7 +388,7 @@ Example:
 - Contribution Guidelines: [English](./CONTRIBUTING.md) | [简体中文](./doc/CONTRIBUTING_zh.md)
 - [ChangeLog](./CHANGELOG.md)
 - Development Documents: https://www.swifttechco.com
-- [FAQ](https://www.swifttechco.com)
+- FAQ
 
 ## Directory Structure
 
@@ -416,14 +415,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [XiaoMi/ha_xiaomi_home](https://github.com/XiaoMi/ha_xiaomi_home) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
